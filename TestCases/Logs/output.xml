@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2024-09-05T12:56:02.287143" rpa="false" schemaversion="5">
+<suite id="s1" name="Initial1" source="C:\Users\USER\PycharmProjects\RobotFrameWork\TestCases\initial1.robot">
+<kw name="Log" owner="BuiltIn" type="SETUP">
+<msg time="2024-09-05T12:56:02.442357" level="INFO">I am in suite setup</msg>
+<arg>I am in suite setup</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-05T12:56:02.441395" elapsed="0.000962"/>
+</kw>
+<test id="s1-t1" name="Register Jane Doe" line="62">
+<kw name="Go To Website http:localhost:3000/ chrome" type="SETUP">
+<msg time="2024-09-05T12:56:02.443442" level="FAIL">No keyword with name 'Go To Website http:localhost:3000/ chrome' found. Did you try using keyword 'SeleniumLibrary.Go To' and forgot to use enough whitespace between keyword and arguments?</msg>
+<status status="FAIL" start="2024-09-05T12:56:02.443442" elapsed="0.000000">No keyword with name 'Go To Website http:localhost:3000/ chrome' found. Did you try using keyword 'SeleniumLibrary.Go To' and forgot to use enough whitespace between keyword and arguments?</status>
+</kw>
+<kw name="Closing Procedures" type="TEARDOWN">
+<msg time="2024-09-05T12:56:02.445358" level="FAIL">No keyword with name 'Closing Procedures' found.</msg>
+<status status="FAIL" start="2024-09-05T12:56:02.445358" elapsed="0.000000">No keyword with name 'Closing Procedures' found.</status>
+</kw>
+<doc>this test case tries to register an employee</doc>
+<tag>register</tag>
+<status status="FAIL" start="2024-09-05T12:56:02.442357" elapsed="0.003001">Setup failed:
+No keyword with name 'Go To Website http:localhost:3000/ chrome' found. Did you try using keyword 'SeleniumLibrary.Go To' and forgot to use enough whitespace between keyword and arguments?
+
+Also teardown failed:
+No keyword with name 'Closing Procedures' found.</status>
+</test>
+<test id="s1-t2" name="Register Jane Employee" line="69">
+<kw name="Go To Website http:localhost:3000/ chrome" type="SETUP">
+<msg time="2024-09-05T12:56:02.447359" level="FAIL">No keyword with name 'Go To Website http:localhost:3000/ chrome' found. Did you try using keyword 'SeleniumLibrary.Go To' and forgot to use enough whitespace between keyword and arguments?</msg>
+<status status="FAIL" start="2024-09-05T12:56:02.447359" elapsed="0.000000">No keyword with name 'Go To Website http:localhost:3000/ chrome' found. Did you try using keyword 'SeleniumLibrary.Go To' and forgot to use enough whitespace between keyword and arguments?</status>
+</kw>
+<kw name="Closing Procedures" type="TEARDOWN">
+<msg time="2024-09-05T12:56:02.449440" level="FAIL">No keyword with name 'Closing Procedures' found.</msg>
+<status status="FAIL" start="2024-09-05T12:56:02.449440" elapsed="0.000000">No keyword with name 'Closing Procedures' found.</status>
+</kw>
+<doc>this test case tries to register an employee</doc>
+<tag>register</tag>
+<status status="FAIL" start="2024-09-05T12:56:02.446360" elapsed="0.003080">Setup failed:
+No keyword with name 'Go To Website http:localhost:3000/ chrome' found. Did you try using keyword 'SeleniumLibrary.Go To' and forgot to use enough whitespace between keyword and arguments?
+
+Also teardown failed:
+No keyword with name 'Closing Procedures' found.</status>
+</test>
+<kw name="Log" owner="BuiltIn" type="TEARDOWN">
+<msg time="2024-09-05T12:56:02.450948" level="INFO">I am in suite Teardown</msg>
+<arg>I am in suite Teardown</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-05T12:56:02.450948" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-09-05T12:56:02.289280" elapsed="0.161668"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="2" skip="0">register</stat>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Initial1">Initial1</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-09-05T12:56:02.436450" level="ERROR">Error in file 'C:\Users\USER\PycharmProjects\RobotFrameWork\TestCases\initial1.robot' on line 4: Error in file 'C:\Users\USER\PycharmProjects\RobotFrameWork\Resources\Keywords\Login.robot' on line 8: Resource file with 'Test Cases' section is invalid.</msg>
+</errors>
+</robot>

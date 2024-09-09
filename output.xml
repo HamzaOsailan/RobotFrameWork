@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2024-09-08T12:57:26.408935" rpa="false" schemaversion="5">
+<suite id="s1" name="Mobile Ocr Test" source="C:\Users\USER\PycharmProjects\RobotFrameWork\Tests\MobileTests\mobile_ocr_test.robot">
+<test id="s1-t1" name="Open Application and Extract Text" line="17">
+<kw name="Open Test Application">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${APPIUM_SERVER}</arg>
+<arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>platformName=${ANDROID_PLATFORM_NAME}</arg>
+<arg>platformVersion=${ANDROID_PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-09-08T12:57:26.696564" elapsed="8.046820"/>
+</kw>
+<doc>Opens the Android application using Appium.</doc>
+<status status="PASS" start="2024-09-08T12:57:26.694865" elapsed="8.048519"/>
+</kw>
+<kw name="Take Screenshot">
+<msg time="2024-09-08T12:57:34.745895" level="FAIL">No keyword with name 'Take Screenshot' found.</msg>
+<var>${screenshot_path}</var>
+<arg>C:\\Users\\USER\\PycharmProjects\\RobotFrameWork\\Tests\\MobileTests/screenshot.png</arg>
+<status status="FAIL" start="2024-09-08T12:57:34.745895" elapsed="0.000000">No keyword with name 'Take Screenshot' found.</status>
+</kw>
+<kw name="Extract Text From Image">
+<var>${text}</var>
+<arg>${screenshot_path}</arg>
+<status status="NOT RUN" start="2024-09-08T12:57:34.746911" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-09-08T12:57:34.746911" elapsed="0.000000"/>
+</kw>
+<kw name="Close Test Application">
+<doc>Closes the mobile application.</doc>
+<status status="NOT RUN" start="2024-09-08T12:57:34.747908" elapsed="0.000000"/>
+</kw>
+<doc>Opens the application, takes a screenshot, extracts text, and logs it.</doc>
+<status status="FAIL" start="2024-09-08T12:57:26.693864" elapsed="8.054044">No keyword with name 'Take Screenshot' found.</status>
+</test>
+<status status="FAIL" start="2024-09-08T12:57:26.410928" elapsed="8.338982"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Mobile Ocr Test">Mobile Ocr Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-09-08T12:57:26.684900" level="WARN">Imported library 'C:\Users\USER\PycharmProjects\RobotFrameWork\Resources\Keywords\ocr_library.py' contains no keywords.</msg>
+<msg time="2024-09-08T12:57:26.690857" level="ERROR">Error in file 'C:\Users\USER\PycharmProjects\RobotFrameWork\Tests\MobileTests\mobile_ocr_test.robot' on line 4: Error in file 'C:\Users\USER\PycharmProjects\RobotFrameWork\Resources\Keywords\Ocr_GetTextFromImage.robot' on line 14: Resource file with 'Test Cases' section is invalid.</msg>
+</errors>
+</robot>

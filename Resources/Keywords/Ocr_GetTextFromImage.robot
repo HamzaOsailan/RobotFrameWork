@@ -4,6 +4,7 @@ Library           ocr_library.py
 *** Variables ***
 ${IMAGE_PATH}     C:/Users/USER/PycharmProjects/RobotFrameWork/screenshots/pepsi.jpg
 ${PDF_PATH}       C:/Users/USER/PycharmProjects/RobotFrameWork/screenshots/Id.pdf
+#${PYTHON_SCRIPT}  C:/Users/USER/PycharmProjects/RobotFrameWork/extract_text_from_pdf.py
 
 *** Test Cases ***
 Extract Text From Image

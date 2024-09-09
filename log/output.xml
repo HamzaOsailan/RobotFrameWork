@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2024-09-09T09:02:42.313410" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2024-09-09T10:00:20.675923" rpa="false" schemaversion="5">
 <suite id="s1" name="Ocr GetTextFromImage" source="C:\Users\USER\PycharmProjects\RobotFrameWork\Resources\Keywords\Ocr_GetTextFromImage.robot">
-<test id="s1-t1" name="Extract Text From Image" line="9">
+<test id="s1-t1" name="Extract Text From Image" line="10">
 <kw name="Extract Text From Image" owner="ocr_library">
-<msg time="2024-09-09T09:02:42.933932" level="INFO">${text} = PEPSI
+<msg time="2024-09-09T10:00:21.242343" level="INFO">${text} = PEPSI
 aw
 </msg>
 <var>${text}</var>
 <arg>${IMAGE_PATH}</arg>
 <doc>Extracts text from the given image using Tesseract OCR.</doc>
-<status status="PASS" start="2024-09-09T09:02:42.385563" elapsed="0.548369"/>
+<status status="PASS" start="2024-09-09T10:00:20.744518" elapsed="0.498831"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-09-09T09:02:42.934890" level="INFO">Extracted Text:-&gt;&gt; PEPSI
+<msg time="2024-09-09T10:00:21.244350" level="INFO">Extracted Text:-&gt;&gt; PEPSI
 aw
 </msg>
 <arg>Extracted Text:-&gt;&gt; ${text}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-09-09T09:02:42.934890" elapsed="0.000000"/>
+<status status="PASS" start="2024-09-09T10:00:21.243349" elapsed="0.001001"/>
 </kw>
-<status status="PASS" start="2024-09-09T09:02:42.384598" elapsed="0.550292"/>
+<status status="PASS" start="2024-09-09T10:00:20.744518" elapsed="0.499832"/>
 </test>
-<test id="s1-t2" name="Extract Text From PDF" line="13">
+<test id="s1-t2" name="Extract Text From PDF" line="14">
 <kw name="Extract Text From Pdf" owner="ocr_library">
-<msg time="2024-09-09T09:02:44.198958" level="INFO">${text} = --- Text from Page 1 ---
+<msg time="2024-09-09T10:00:22.563290" level="INFO">${text} = --- Text from Page 1 ---
 af dred dope! AS LoL
 Ye
 
@@ -44,10 +44,10 @@ UU eye
 <var>${text}</var>
 <arg>${PDF_PATH}</arg>
 <doc>Extracts text from each page of the given PDF using Tesseract OCR.</doc>
-<status status="PASS" start="2024-09-09T09:02:42.935882" elapsed="1.263076"/>
+<status status="PASS" start="2024-09-09T10:00:21.244350" elapsed="1.318940"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-09-09T09:02:44.200023" level="INFO">Extracted Text:-&gt;&gt; --- Text from Page 1 ---
+<msg time="2024-09-09T10:00:22.564295" level="INFO">Extracted Text:-&gt;&gt; --- Text from Page 1 ---
 af dred dope! AS LoL
 Ye
 
@@ -70,11 +70,11 @@ UU eye
 </msg>
 <arg>Extracted Text:-&gt;&gt; ${text}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-09-09T09:02:44.198958" elapsed="0.001065"/>
+<status status="PASS" start="2024-09-09T10:00:22.564295" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-09-09T09:02:42.934890" elapsed="1.265133"/>
+<status status="PASS" start="2024-09-09T10:00:21.244350" elapsed="1.319945"/>
 </test>
-<status status="PASS" start="2024-09-09T09:02:42.325052" elapsed="1.876042"/>
+<status status="PASS" start="2024-09-09T10:00:20.686446" elapsed="1.878847"/>
 </suite>
 <statistics>
 <total>

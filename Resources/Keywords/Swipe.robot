@@ -1,24 +1,32 @@
 *** Settings ***
-Resource    ../locators/locators.robot
-Library     AppiumLibrary
+Library    AppiumLibrary
+Resource    ../../Resources/locators/locators.robot
 
 *** Keywords ***
 
 Open Swipe Page
-    [Documentation]  Navigate to the Swipe page by clicking the Swipe navigation element.
     Click Element    ${SwipeNav}
 
-Swipe Screen
-    [Documentation]  Perform a swipe gesture using touch action by offset.
-    # Swipes from (500, 1500) to approximately (500, 300) vertically
-    Perform Touch Action
-    ...    press=500,1500  # Start coordinates of the swipe
-    ...    wait=1000       # Wait time in milliseconds before moving
-    ...    move_to=500,300 # End coordinates of the swipe
-    ...    release         # Release the swipe action
-    ...    wait=1000       # Wait after completing the swipe
+Swipe Left to Right
+    [Arguments]    ${fragment}
+    Wait Until Element Is Visible    ${fragment}    timeout=10s
+    ${element_size}=    Get Element Size    ${fragment}
+    ${element_location}=    Get Element Location    ${fragment}
+    ${start_x}=    Evaluate    ${element_location['x']} + (${element_size['width']} * 0.2)
+    ${start_y}=    Evaluate    ${element_location['y']} + (${element_size['height']} * 0.1)
+    ${end_x}=      Evaluate    ${element_location['x']} + (${element_size['width']} * 0.8)
+    ${end_y}=    Evaluate    ${element_location['y']} + (${element_size['height']} * 0.1)
+    Swipe   ${start_x}    ${start_y}    ${end_x}    ${end_y}    duration=1500
+    Sleep    1
 
-Swipe To lastElement
-    [Documentation]  Complete swipe action on the page.
-    Open Swipe Page
-    Swipe Screen
+Swipe Right to Left
+    [Arguments]    ${fragment}
+    Wait Until Element Is Visible    ${fragment}
+    ${element_size}=    Get Element Size    ${fragment}
+    ${element_location}=    Get Element Location    ${fragment}
+    ${start_x}=    Evaluate    ${element_location['x']} + (${element_size['width']} * 1)
+    ${start_y}=    Evaluate    ${element_location['y']} + (${element_size['height']} * 0.1)
+    ${end_x}=    Evaluate    ${element_location['x']} + (${element_size['width']} * 0.1)
+    ${end_y}=    Evaluate    ${element_location['y']} + (${element_size['height']} * 0.1)
+    Swipe   ${start_x}    ${start_y}    ${end_x}    ${end_y}    duration=1500
+    Sleep    1

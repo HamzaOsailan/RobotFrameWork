@@ -24,9 +24,18 @@ Click Register Button
     [Documentation]  Click the sign-up button to submit the registration form.
     Click Element    ${SignUpButton}
 
+
+Verify Success Message
+    [Documentation]  Verify the success message is displayed after register.
+    Wait Until Element Is Visible    ${message_success_register}
+    Element Text Should Be    ${message_success_register}   You successfully signed up!
+
+
+
 Register User
     [Arguments]  ${emailValue}  ${passwordValue}  ${confirm_passwordValue}
     [Documentation]  Complete user registration with the provided details.
     Open Register Page
     Enter Registration Details    ${emailValue}  ${passwordValue}  ${confirm_passwordValue}
     Click Register Button
+    Verify Success Message

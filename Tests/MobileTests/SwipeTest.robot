@@ -1,10 +1,12 @@
 *** Settings ***
 Resource    ../../Resources/Keywords/AppiumKeywords.robot
 Resource    ../../Resources/Keywords/Swipe.robot
+Library     AppiumLibrary
 
 *** Test Cases ***
-Swipe to an Element
-    [Documentation]  Test case to perform a swipe to an element on the page.
+Swipe Test Case
     Open Test Application
-    Swipe To lastElement
+    open swipe page
+    Swipe Left to Right     xpath=//android.widget.TextView[@text="GREAT COMMUNITY"]
+#    Swipe Right to Left     xpath=//android.widget.TextView[@text="GREAT COMMUNITY"]
     Close Test Application

@@ -1,7 +1,6 @@
 *** Settings ***
 Library    AppiumLibrary
-Resource   ../Variables/variables.robot
-Resource   ../Locators/locators.robot
+Resource   ../../Resources/Variables/variables.robot
 
 *** Keywords ***
 Open Test Application
@@ -10,7 +9,7 @@ Open Test Application
     ...    ${APPIUM_SERVER}
     ...    automationName=${ANDROID_AUTOMATION_NAME}
     ...    platformName=${ANDROID_PLATFORM_NAME}
-    ...    platformVersion=${ANDROID_PLATFORM_VERSION}
+#    ...    platformVersion=${ANDROID_PLATFORM_VERSION}
     ...    deviceName=${DEVICE_NAME}
     ...    appPackage=${APP_PACKAGE}
     ...    appActivity=${APP_ACTIVITY}
@@ -18,3 +17,4 @@ Open Test Application
 Close Test Application
     [Documentation]    Closes the mobile application.
     Close Application  # This uses the AppiumLibrary version.
+

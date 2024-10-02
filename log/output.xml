@@ -1,91 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2024-09-09T10:00:20.675923" rpa="false" schemaversion="5">
-<suite id="s1" name="Ocr GetTextFromImage" source="C:\Users\USER\PycharmProjects\RobotFrameWork\Resources\Keywords\Ocr_GetTextFromImage.robot">
-<test id="s1-t1" name="Extract Text From Image" line="10">
-<kw name="Extract Text From Image" owner="ocr_library">
-<msg time="2024-09-09T10:00:21.242343" level="INFO">${text} = PEPSI
-aw
-</msg>
-<var>${text}</var>
-<arg>${IMAGE_PATH}</arg>
-<doc>Extracts text from the given image using Tesseract OCR.</doc>
-<status status="PASS" start="2024-09-09T10:00:20.744518" elapsed="0.498831"/>
+<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2024-10-02T11:55:40.122559" rpa="false" schemaversion="5">
+<suite id="s1" name="ImageProccessing" source="C:\Users\USER\PycharmProjects\RobotFrameWork\Tests\MobileTests\ImageProccessing.robot">
+<test id="s1-t1" name="Extract Text From Image" line="8">
+<kw name="Call Function">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-02T11:55:42.748192" level="FAIL">Evaluating expression 'ocr_library1.OcrLibrary.extract_all_text(Audi.jpg)' failed: NameError: name 'Audi' is not defined nor importable as module</msg>
+<var>${result}</var>
+<arg>ocr_library1.OcrLibrary.extract_all_text(${IMAGE_PATH})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="FAIL" start="2024-10-02T11:55:40.162762" elapsed="2.585430">Evaluating expression 'ocr_library1.OcrLibrary.extract_all_text(Audi.jpg)' failed: NameError: name 'Audi' is not defined nor importable as module</status>
+</kw>
+<return>
+<value>${result}</value>
+<status status="NOT RUN" start="2024-10-02T11:55:42.748192" elapsed="0.014377"/>
+</return>
+<var>${result}</var>
+<status status="FAIL" start="2024-10-02T11:55:40.162762" elapsed="2.599807">Evaluating expression 'ocr_library1.OcrLibrary.extract_all_text(Audi.jpg)' failed: NameError: name 'Audi' is not defined nor importable as module</status>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-09-09T10:00:21.244350" level="INFO">Extracted Text:-&gt;&gt; PEPSI
-aw
-</msg>
-<arg>Extracted Text:-&gt;&gt; ${text}</arg>
+<arg>Extracted text: ${result}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-09-09T10:00:21.243349" elapsed="0.001001"/>
+<status status="NOT RUN" start="2024-10-02T11:55:42.762569" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-09-09T10:00:20.744518" elapsed="0.499832"/>
+<status status="FAIL" start="2024-10-02T11:55:40.162762" elapsed="2.599807">Evaluating expression 'ocr_library1.OcrLibrary.extract_all_text(Audi.jpg)' failed: NameError: name 'Audi' is not defined nor importable as module</status>
 </test>
-<test id="s1-t2" name="Extract Text From PDF" line="14">
-<kw name="Extract Text From Pdf" owner="ocr_library">
-<msg time="2024-09-09T10:00:22.563290" level="INFO">${text} = --- Text from Page 1 ---
-af dred dope! AS LoL
-Ye
-
-* &gt; { tio }.
-hs | ws
-
-ed
-
-a
-
-No: 1107441808 VVeVEENACAT C—S
-DOB: 29/01/2000 2 \t¥e/Ve/¥¥ 3 sl Ay
-DOE: 08/08/2025 4 VE EV/e V/V E 2 el gd! Ay
-
-UU eye
-
-...</msg>
-<var>${text}</var>
-<arg>${PDF_PATH}</arg>
-<doc>Extracts text from each page of the given PDF using Tesseract OCR.</doc>
-<status status="PASS" start="2024-09-09T10:00:21.244350" elapsed="1.318940"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-09-09T10:00:22.564295" level="INFO">Extracted Text:-&gt;&gt; --- Text from Page 1 ---
-af dred dope! AS LoL
-Ye
-
-* &gt; { tio }.
-hs | ws
-
-ed
-
-a
-
-No: 1107441808 VVeVEENACAT C—S
-DOB: 29/01/2000 2 \t¥e/Ve/¥¥ 3 sl Ay
-DOE: 08/08/2025 4 VE EV/e V/V E 2 el gd! Ay
-
-UU eye
-
-1107441808
-
-
-</msg>
-<arg>Extracted Text:-&gt;&gt; ${text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-09-09T10:00:22.564295" elapsed="0.000000"/>
-</kw>
-<status status="PASS" start="2024-09-09T10:00:21.244350" elapsed="1.319945"/>
-</test>
-<status status="PASS" start="2024-09-09T10:00:20.686446" elapsed="1.878847"/>
+<status status="FAIL" start="2024-10-02T11:55:40.138195" elapsed="2.625886"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Ocr GetTextFromImage">Ocr GetTextFromImage</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="ImageProccessing">ImageProccessing</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2024-10-02T11:55:40.118681" level="WARN">Error in file 'C:\Users\USER\PycharmProjects\RobotFrameWork\Tests\MobileTests\ImageProccessing.robot' on line 15: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-10-02T11:55:40.162762" level="ERROR">Error in file 'C:\Users\USER\PycharmProjects\RobotFrameWork\Tests\MobileTests\ImageProccessing.robot' on line 2: Importing library '../../Resources/Keywords/ocr_library1' failed: ModuleNotFoundError: No module named '.'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\USER\AppData\Roaming\JetBrains\PyCharmCE2024.2\plugins\robotframework-intellij\lib\robotframework_debug_adapter
+  C:\Users\USER\PycharmProjects\RobotFrameWork
+  C:\Users\USER\AppData\Roaming\JetBrains\PyCharmCE2024.2\plugins\robotframework-intellij\lib
+  C:\Users\USER\AppData\Roaming\JetBrains\PyCharmCE2024.2\plugins\robotframework-intellij\lib\robotframework_ls\vendored
+  C:\Users\USER\AppData\Local\Programs\Python\Python312\python312.zip
+  C:\Users\USER\AppData\Local\Programs\Python\Python312\DLLs
+  C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib
+  C:\Users\USER\AppData\Local\Programs\Python\Python312
+  C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\site-packages</msg>
 </errors>
 </robot>

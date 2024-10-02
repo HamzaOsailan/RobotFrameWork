@@ -6,10 +6,10 @@
 *** Variables ***
 ${ANDROID_AUTOMATION_NAME}    UIAutomator2
 ${ANDROID_PLATFORM_NAME}      Android
-${ANDROID_PLATFORM_VERSION}   8.1
 ${DEVICE_NAME}                Android Emulator
-${APP_PACKAGE}                com.wdiodemoapp
-${APP_ACTIVITY}               com.wdiodemoapp.MainActivity
+${APP_PACKAGE}                com.google.android.apps.photos
+${APP_ACTIVITY}               com.google.android.apps.photos.home.HomeActivity
 ${APPIUM_SERVER}              http://127.0.0.1:4723
 ${URL}                        http://localhost:3000/
 ${BROWSER}                    chrome
+${IMAGE_PATH}    C:/Users/USER/PycharmProjects/RobotFrameWork/screenshots/WhatsApp Image 2024-08-18 at 13.37.17_739a294a.jpg

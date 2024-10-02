@@ -5,6 +5,7 @@ Library     AppiumLibrary
 *** Keywords ***
 Open Forms Page
     [Documentation]  Navigate to the Login page.
+    Wait Until Element Is Visible    ${FormsNavs} 15 seconds
     Click Element    ${FormsNavs}
 
 Enter Input field
